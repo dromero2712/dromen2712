@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espacio | Nuestro Planeta</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/Espacio.css">
+    <!-- Include Bootstrap for news section layout -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Nuestro Planeta</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/animales.html">Animales</a></li>
+                <li><a href="../pages/Ecosistemas.html">Ecosistemas</a></li>
+                <li><a href="../pages/CuerposDeAgua.html">Cuerpos de Agua</a></li>
+                <li><a href="../pages/Espacio.html" class="active">Espacio</a></li>
+                <li><a href="../pages/Urbanismo.html">Urbanismo</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="space-hero">
+            <div class="hero-content">
+                <h2>Explorando el Cosmos</h2>
+                <p>Un viaje a través de las maravillas del universo y nuestro lugar en él.</p>
+            </div>
+        </section>
+
+        <section class="space-categories">
+            <h2>Temas Cósmicos</h2>
+            <div class="category-grid">
+                <div class="category-card" id="planets">
+                    <div class="category-icon">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60" fill="#663399"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c3.95.49 7 3.85 7 7.93s-3.05 7.44-7 7.93V4.07z"/></svg>
+                    </div>
+                    <h3>Planetas</h3>
+                    <p>Los mundos que orbitan nuestro Sol y otras estrellas.</p>
+                    <button class="category-btn" onclick="showSpaceInfo('planets')">Leer más</button>
+                </div>
+                <div class="category-card" id="stars">
+                    <div class="category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <h3>Estrellas</h3>
+                    <p>Gigantes bolas de gas que iluminan el universo.</p>
+                    <button class="category-btn" onclick="showSpaceInfo('stars')">Leer más</button>
+                </div>
+                <div class="category-card" id="galaxies">
+                    <div class="category-icon">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60"><path d="M12 2C9.2 2 7 4.2 7 7s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3zm8 4c-1.1 0-2.1.5-2.8 1.4-.7-.9-1.7-1.4-2.8-1.4-1.1 0-2.1.5-2.8 1.4-.7-.9-1.7-1.4-2.8-1.4-1.1 0-2.1.5-2.8 1.4C4.1 14.5 3 15.6 3 17s1.1 2.5 2.8 3.4c.7.9 1.7 1.4 2.8 1.4 1.1 0 2.1-.5 2.8-1.4.7.9 1.7 1.4 2.8 1.4 1.1 0 2.1-.5 2.8-1.4.7.9 1.7 1.4 2.8 1.4 1.1 0 2.1-.5 2.8-1.4C20.9 19.5 22 18.4 22 17s-1.1-2.5-2.8-3.4c-.7-.9-1.7-1.4-2.8-1.4zM6 19.8c-1-.6-1.8-1.5-2-2.6.3-.1.6-.3.8-.5 1.1-1.1 2.6-1.7 4.2-1.7s3.1.6 4.2 1.7c.2.2.5.4.8.5-1 1.6-2.7 2.6-4.6 2.6-1.1 0-2.1-.3-3-.8zm6 0c-.9.5-1.9.8-3 .8-1.9 0-3.6-1-4.6-2.6.2-.1.5-.3.8-.5 1.1-1.1 2.6-1.7 4.2-1.7s3.1.6 4.2 1.7c.3.2.5.4.8.5-1 1.6-2.7 2.6-4.6 2.6zM6 19.8c-1-.6-1.8-1.5-2-2.6.3-.1.6-.3.8-.5 1.1-1.1 2.6-1.7 4.2-1.7s3.1.6 4.2 1.7c.2.2.5.4.8.5-1 1.6-2.7 2.6-4.6 2.6-1.1 0-2.1-.3-3-.8zm6 0c-.9.5-1.9.8-3 .8-1.9 0-3.6-1-4.6-2.6.2-.1.5-.3.8-.5 1.1-1.1 2.6-1.7 4.2-1.7s3.1.6 4.2 1.7c.3.2.5.4.8.5-1 1.6-2.7 2.6-4.6 2.6zm6 0c-.9.5-1.9.8-3 .8-1.9 0-3.6-1-4.6-2.6.2-.1.5-.3.8-.5 1.1-1.1 2.6-1.7 4.2-1.7s3.1.6 4.2 1.7c.2.2.5.4.8.5-1 1.6-2.7 2.6-4.6 2.6z"/></svg>
+                    </div>
+                    <h3>Galaxias</h3>
+                    <p>Inmensas colecciones de estrellas, gas y polvo.</p>
+                    <button class="category-btn" onclick="showSpaceInfo('galaxies')">Leer más</button>
+                </div>
+                <div class="category-card" id="nebulae">
+                     <div class="category-icon">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60"><path d="M12 3c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm7 5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm7 5c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm-7 4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm14 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                    </div>
+                    <h3>Nebulosas</h3>
+                    <p>Nubes de gas y polvo donde nacen las estrellas.</p>
+                    <button class="category-btn" onclick="showSpaceInfo('nebulae')">Leer más</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-modal" id="space-info-section">
+             <div class="info-container">
+                <span class="close-btn" onclick="closeSpaceInfo()">&times;</span>
+                <div id="info-content">
+                    <!-- Contenido dinámico se cargará aquí -->
+                </div>
+            </div>
+        </section>
+
+        <section class="highlight-section">
+            <div class="highlight-content">
+                 <div class="highlight-image">
+                     <img src="../assets/img/Espacio.jpg" alt="Nave espacial orbitando la Tierra">
+                 </div>
+                <div class="highlight-text">
+                    <h2>Objeto Destacado: La Tierra</h2>
+                    <p>Nuestro hogar, un planeta rocoso único con agua líquida en su superficie y una atmósfera que sustenta una increíble diversidad de vida. Orbita alrededor del Sol en la zona habitable.</p>
+                    <p>La exploración espacial nos ha dado perspectivas asombrosas de nuestro propio planeta, revelando su belleza, fragilidad y la interconexión de sus sistemas.</p>
+                    <ul class="highlight-facts">
+                        <li><strong>Tipo:</strong> Planeta Terrestre</li>
+                        <li><strong>Diámetro:</strong> Aproximadamente 12,742 km</li>
+                        <li><strong>Satélite Natural:</strong> La Luna</li>
+                        <li><strong>Característica Única:</strong> Presencia de vida compleja y agua líquida abundante.</li>
+                         <li><strong>Importancia:</strong> Nuestro único hogar conocido en el vasto universo.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="news-section" class="news-section">
+             <h2>Noticias del Espacio y la NASA</h2>
+             <div id="news-container">
+                <div id="news-articles">
+                    <!-- News articles will be inserted here -->
+                    <p>Cargando noticias...</p>
+                </div>
+             </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nuestro Planeta</h3>
+                <p>Una exploración educativa de los diversos entornos y formas de vida de nuestro mundo.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="animales.html">Animales</a></li>
+                    <li><a href="Ecosistemas.html">Ecosistemas</a></li>
+                    <li><a href="CuerposDeAgua.html">Cuerpos de Agua</a></li>
+                    <li><a href="Espacio.html">Espacio</a></li>
+                    <li><a href="Urbanismo.html">Urbanismo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Nuestro Planeta. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script type="module" src="../assets/js/espacio.js"></script>
+</body>
+</html>

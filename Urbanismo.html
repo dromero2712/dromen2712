@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urbanismo | Nuestro Planeta</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/Urbanismo.css">
+    <!-- Include Bootstrap for news section layout if needed -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Nuestro Planeta</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/animales.html">Animales</a></li>
+                <li><a href="../pages/Ecosistemas.html">Ecosistemas</a></li>
+                <li><a href="../pages/CuerposDeAgua.html">Cuerpos de Agua</a></li>
+                <li><a href="../pages/Espacio.html">Espacio</a></li>
+                <li><a href="../pages/Urbanismo.html" class="active">Urbanismo</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="urbanismo-hero">
+            <div class="hero-content">
+                <h2>El Entorno Urbano</h2>
+                <p>Explora las ciudades, la arquitectura y la vida humana en espacios construidos.</p>
+            </div>
+        </section>
+
+        <section class="urbanismo-categories">
+            <h2>Temas de Urbanismo</h2>
+            <div class="category-grid">
+                <div class="category-card" id="architecture">
+                    <div class="category-icon">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60" fill="#2c3e50"><path d="M3,21V9H11V21H3M13,21V3H21V21H13M5,19H9V11H5V19M15,19H19V5H15V19Z"/></svg>
+                    </div>
+                    <h3>Arquitectura</h3>
+                    <p>El diseño y construcción de edificios y estructuras urbanas.</p>
+                    <button class="category-btn" onclick="showUrbanismoInfo('architecture')">Leer más</button>
+                </div>
+                <div class="category-card" id="planning">
+                    <div class="category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60" fill="#2c3e50"><path d="M15,15H17V17H15V15M15,19H17V21H15V19M11,15H13V17H11V15M11,19H13V21H11V19M7,15H9V17H7V15M7,19H9V21H7V19M19,7H21V9H19V7"/></svg>
+                    </div>
+                    <h3>Planificación</h3>
+                    <p>La planificación y organización de espacios urbanos.</p>
+                    <button class="category-btn" onclick="showUrbanismoInfo('planning')">Leer más</button>
+                </div>
+                 <!-- Add more categories if needed -->
+            </div>
+        </section>
+
+        <!-- Modal Structure (similar to animals.html) -->
+        <section class="info-modal" id="urbanismo-info-section">
+             <div class="info-container">
+                <span class="close-btn" onclick="closeUrbanismoInfo()">&times;</span>
+                <div id="info-content">
+                    <!-- Dynamic content will be loaded here by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlight Section (similar to animals.html) -->
+        <section class="highlight-section">
+            <div class="highlight-content">
+                <div class="highlight-image">
+                    <img src="/Urbanismo.jpeg" alt="Ciudad con tren">
+                </div>
+                <div class="highlight-text">
+                    <h2>Concepto Destacado: La Ciudad Inteligente</h2>
+                    <p>Una ciudad inteligente utiliza tecnología y datos para mejorar la calidad de vida de sus ciudadanos, optimizar servicios (transporte, energía, residuos) y gestionar recursos de manera más eficiente.</p>
+                    <p>Implica la integración de sistemas digitales en la infraestructura urbana para abordar desafíos como la congestión, la contaminación y la sostenibilidad. Busca crear entornos más seguros, eficientes y habitables.</p>
+                    <ul class="highlight-facts">
+                        <li><strong>Tecnología Clave:</strong> Sensores, IoT (Internet de las Cosas), Big Data, IA.</li>
+                        <li><strong>Objetivos:</strong> Eficiencia operativa, sostenibilidad, mejora de la calidad de vida.</li>
+                        <li><strong>Áreas de Aplicación:</strong> Transporte, energía, seguridad, gestión de residuos.</li>
+                        <li><strong>Ejemplos:</strong> Singapur, Barcelona, Amsterdam.</li>
+                        <li><strong>Importancia:</strong> Preparar las ciudades para el crecimiento poblacional y desafíos ambientales.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section (keeping this as it's in Ecosistemas/CuerposDeAgua) -->
+        <section id="news-section" class="news-section">
+             <h2>Noticias de Urbanismo</h2>
+             <div id="news-container">
+                <div id="news-articles">
+                    <!-- News articles will be inserted here by JS -->
+                    <p>Cargando noticias...</p>
+                </div>
+             </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nuestro Planeta</h3>
+                <p>Una exploración educativa de los diversos entornos y formas de vida de nuestro mundo.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="animales.html">Animales</a></li>
+                    <li><a href="Ecosistemas.html">Ecosistemas</a></li>
+                    <li><a href="CuerposDeAgua.html">Cuerpos de Agua</a></li>
+                    <li><a href="Espacio.html">Espacio</a></li>
+                    <li><a href="Urbanismo.html">Urbanismo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Nuestro Planeta. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <!-- Include Bootstrap JS if needed, using importmap -->
+    <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            }
+        }
+    </script>
+    <script type="module" src="../assets/js/Urbanismo.js"></script>
+</body>
+</html>

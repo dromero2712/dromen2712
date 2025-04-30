@@ -1,0 +1,377 @@
+/* Base styles (you might inherit some from style.css) */
+body {
+    background-color: #eef1f5; /* Light background for contrast */
+}
+
+/* Hero Section */
+.space-hero {
+    height: 50vh;
+    background-image: linear-gradient(rgba(10, 10, 20, 0.6), rgba(10, 10, 20, 0.6)), url('../img/Espacio.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.space-hero .hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.space-hero .hero-content p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Categories Section */
+.space-categories {
+    padding: 50px 5%;
+}
+
+.space-categories h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #3a2a6d; /* Deep purple */
+    font-size: 2.5rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #d0c8e8; /* Light purple border */
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(58, 42, 109, 0.15); /* Purple shadow */
+}
+
+.category-icon svg {
+    margin-bottom: 15px;
+    fill: #663399; /* Rebeccapurple */
+}
+
+.category-card h3 {
+    color: #3a2a6d; /* Deep purple */
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.category-card p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background-color: #663399; /* Rebeccapurple */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #4d2673; /* Darker purple */
+}
+
+/* Info Modal Section */
+.info-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 20, 0.85); /* Dark semi-transparent background */
+    z-index: 1001;
+    overflow: auto;
+    padding-top: 60px;
+}
+
+.info-container {
+    background-color: #f8f8fa; /* Slightly off-white */
+    margin: 5% auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.1); /* Subtle glow */
+    position: relative;
+    animation: fadeInModal 0.5s;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    color: #ff4d4d; /* Red hover */
+    transform: rotate(90deg);
+}
+
+/* Dynamic content styles inside modal */
+#info-content h2 {
+    color: #663399; /* Rebeccapurple */
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d0c8e8;
+    padding-bottom: 10px;
+}
+
+#info-content h3 {
+    color: #3a2a6d; /* Deep purple */
+    margin: 25px 0 10px;
+    font-size: 1.2rem;
+}
+
+#info-content ul {
+    margin-left: 25px;
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+}
+#info-content ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 25px; /* Space for custom bullet */
+}
+#info-content ul li::before {
+     content: '✦'; /* Star symbol */
+     position: absolute;
+     left: 0;
+     top: 1px;
+     color: #8a5cca; /* Lighter purple */
+     font-size: 1.2rem;
+}
+
+.example-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+.example-tag {
+    background: #e6e0f2; /* Very light purple */
+    padding: 6px 15px;
+    border-radius: 20px;
+    color: #4d2673; /* Darker purple text */
+    font-size: 0.9rem;
+    border: 1px solid #c5b7e0;
+    font-weight: 500;
+}
+.fun-fact {
+    background: #fff9e0; /* Light yellow */
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 5px solid #ffcc00; /* Gold border */
+    margin-top: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.fun-fact h3 {
+    color: #cc8400; /* Dark yellow/orange */
+    margin-bottom: 10px;
+}
+.fun-fact p {
+    color: #333;
+}
+
+/* Highlight Section */
+.highlight-section {
+    padding: 80px 5%;
+    background-color: #ded5f5; /* Light purple background */
+}
+
+.highlight-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-text h2 {
+    color: #663399; /* Rebeccapurple */
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.highlight-text p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.highlight-facts {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.highlight-facts li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+    color: #333;
+}
+
+.highlight-facts li::before {
+    content: '🌍'; /* Earth icon */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.3rem;
+}
+.highlight-facts li strong {
+    color: #3a2a6d; /* Deep purple */
+}
+
+
+/* News Section */
+.news-section {
+    padding: 50px 5%;
+    background-color: #ffffff; /* White background */
+}
+
+.news-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #3a2a6d; /* Deep purple */
+    font-size: 2.5rem;
+}
+
+#news-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #f8f8fa; /* Light grey for contrast */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Hide scrollbar visually */
+}
+
+#news-articles {
+    padding-bottom: 15px; /* Space for potential horizontal scrollbar */
+}
+
+/* News Card Styles (Apply to the specific class added by JS) */
+.space-news-card {
+    background-color: rgba(58, 42, 109, 0.85) !important; /* Deep purple, slightly transparent */
+    border-color: #a187d6 !important; /* Lighter purple border */
+    color: white !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3) !important;
+    padding: 15px !important; /* Ensure padding */
+    border-radius: 8px !important; /* Ensure border-radius */
+}
+
+.space-news-card h3 {
+    color: #ffffff !important; /* White titles */
+    font-size: 1.1rem !important;
+    margin-bottom: 0.5rem !important; /* Match JS */
+}
+
+.space-news-card p {
+     color: #e6e0f2 !important; /* Lighter text */
+     font-size: 0.9rem !important;
+     margin-bottom: 0.8rem !important; /* Match JS */
+}
+
+.space-news-card p:nth-of-type(2) { /* Source text */
+    color: #c5b7e0 !important; /* Even lighter for source */
+    font-style: italic !important;
+    opacity: 0.9 !important;
+    margin-bottom: 1rem !important; /* Match JS */
+}
+
+.space-news-card a.btn { /* Target the specific anchor tag with .btn class */
+    background-color: #ffffff !important; /* White button */
+    color: #663399 !important; /* Purple text */
+    border: none !important;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 5px 10px !important; /* Match btn-sm size */
+    font-size: 0.9rem !important; /* Match btn-sm size */
+    border-radius: 5px !important; /* Match btn-sm size */
+}
+
+.space-news-card a.btn:hover {
+     background-color: #e6e0f2 !important; /* Light purple hover */
+     color: #4d2673 !important;
+}
+
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .highlight-content {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+    .info-container {
+        width: 90%;
+        margin: 20% auto;
+        padding: 20px;
+    }
+    .space-hero .hero-content h2 {
+        font-size: 2.2rem;
+    }
+     .space-categories h2, .highlight-section h2, .news-section h2 {
+        font-size: 2rem;
+    }
+     /* Adjust news card width on smaller screens */
+     #news-articles .d-flex > .space-news-card {
+         width: 260px !important; /* Slightly smaller cards on mobile */
+     }
+}
+
+/* Remove original essay container styles */
+.essay-container {
+    display: none;
+}
+
+/* Ensure h1, h2 colors are consistent with theme */
+h1, h2 {
+    color: #3a2a6d; /* Deep purple for overall headings */
+}

@@ -1,0 +1,268 @@
+/* Hero section for animals page */
+.animal-hero {
+    height: 50vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Animales.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.animal-hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.animal-hero p {
+    font-size: 1.2rem;
+}
+
+/* Animal categories section */
+.animal-categories {
+    padding: 50px 5%;
+}
+
+.animal-categories h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.animal-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.animal-icon {
+    margin-bottom: 15px;
+}
+
+.animal-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.animal-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.animal-btn {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.animal-btn:hover {
+    background-color: #1a252f;
+}
+
+/* Animal info section (modal) */
+.animal-info {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow: auto;
+}
+
+.info-container {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Highlight animal section */
+.highlight-animal {
+    padding: 80px 5%;
+    background-color: #f9f9f9;
+}
+
+.highlight-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.highlight-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-text h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.highlight-text p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.tiger-facts {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tiger-facts li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.tiger-facts li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #e67e22;
+}
+
+/* News Section Styles */
+.news-section {
+    padding: 50px 5%;
+    background-color: #f9f9f9; /* Light background */
+}
+
+.news-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50; /* Dark blue-grey, consistent with main theme */
+    font-size: 2.5rem;
+}
+
+#news-container {
+    margin: 0 auto; /* Centered */
+    width: 100%;
+    max-width: 1200px; /* Limit width */
+    padding: 20px;
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Hide scrollbar visually, handled by JS/Bootstrap */
+}
+
+/* Styles for the news slider container */
+#news-articles {
+    padding-bottom: 15px; /* Space for potential horizontal scrollbar */
+}
+
+/* Style individual news cards (controlled by JS) */
+/* Use specific Animal news card styles */
+#news-articles .animal-news-card {
+    background-color: rgba(230, 140, 0, 0.8) !important; /* Orange/Brown theme, slightly transparent */
+    border-color: #ffcc99 !important; /* Lighter border color */
+    color: #fff !important; /* White text */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3) !important;
+    width: 300px; /* Consistent width */
+}
+
+#news-articles .animal-news-card h3 {
+    color: #ffffff !important; /* White titles */
+    font-size: 1.1rem !important;
+}
+
+#news-articles .animal-news-card p {
+     color: #fff0e6 !important; /* Lighter text */
+     font-size: 0.9rem !important;
+}
+
+#news-articles .animal-news-card p:nth-of-type(2) { /* Source text */
+    color: #ffe6cc !important; /* Even lighter for source */
+    font-style: italic;
+}
+
+#news-articles .animal-news-card a {
+    background-color: #ffffff !important; /* White button */
+    color: #e67e22 !important; /* Orange text */
+    border: none !important;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#news-articles .animal-news-card a:hover {
+     background-color: #fff0e6 !important; /* Light orange hover */
+     color: #d35400 !important; /* Darker orange text */
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .highlight-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-container {
+        width: 90%;
+        margin: 20% auto;
+    }
+    
+    .animal-hero h2 {
+        font-size: 2.2rem;
+    }
+    
+    .animal-categories h2, .highlight-animal h2, .news-section h2 {
+        font-size: 2rem;
+    }
+
+     #news-articles .animal-news-card { /* Targeting the individual article divs */
+         width: 260px !important; /* Slightly smaller cards on mobile */
+     }
+}
+
+/* Ensure h1, h2 colors are consistent with theme */
+h1, h2 {
+    color: #2c3e50; /* Dark blue-grey for overall headings */
+}

@@ -1,0 +1,332 @@
+/* Hero section for Water page */
+.water-hero {
+    height: 50vh;
+    background-image: linear-gradient(rgba(0, 77, 153, 0.6), rgba(0, 77, 153, 0.6)), url('../img/CuerposDeAgua.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.water-hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff; /* Ensure text is white */
+}
+
+.water-hero p {
+    font-size: 1.2rem;
+    color: #ffffff; /* Ensure text is white */
+}
+
+/* Water categories section */
+.water-categories {
+    padding: 50px 5%;
+}
+
+.water-categories h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #0077b6; /* Blue theme color */
+    font-size: 2.5rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 119, 182, 0.15); /* Blue shadow */
+}
+
+.category-icon svg {
+    margin-bottom: 15px;
+    fill: #0077b6; /* Blue theme color */
+}
+
+.category-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.category-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background-color: #0077b6; /* Blue theme color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #023e8a; /* Darker blue */
+}
+
+/* Info modal section */
+.info-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1001; /* Above navbar */
+    overflow: auto;
+    padding-top: 60px; /* Space from top */
+}
+
+.info-container {
+    background-color: white;
+    margin: 5% auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeInModal 0.5s; /* Simple fade-in animation */
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #e74c3c; /* Red hover */
+}
+
+/* Styles for dynamic content inside modal - added via JS */
+#info-content h2 {
+    color: #0077b6; /* Blue theme */
+    margin-bottom: 15px;
+    text-align: center;
+}
+#info-content h3 {
+    margin: 20px 0 10px;
+    color: #2c3e50;
+    border-bottom: 2px solid #0077b6; /* Blue border */
+    padding-bottom: 5px;
+}
+#info-content ul {
+    margin-left: 20px;
+    list-style: disc; /* Standard disc bullets */
+}
+#info-content ul li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+.example-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.example-tag {
+    background: #e6f7ff; /* Light blue */
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: #0077b6; /* Darker blue */
+    font-size: 0.9rem;
+    border: 1px solid #a9d9ef; /* Medium blue */
+}
+.fun-fact {
+    background: #e0f7fa; /* Very light cyan */
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #00bcd4; /* Cyan border */
+    margin-top: 20px;
+}
+.fun-fact h3 {
+    color: #0097a7; /* Dark cyan */
+    margin-bottom: 10px;
+    border-bottom: none; /* Remove border from h3 inside fun-fact */
+}
+
+/* Highlight section */
+.highlight-section {
+    padding: 80px 5%;
+    background-color: #f1fafe; /* Very light blue background */
+}
+
+.highlight-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Adjust ratio */
+    gap: 50px;
+    align-items: center;
+    max-width: 1100px; /* Limit width */
+    margin: 0 auto; /* Center */
+}
+
+.highlight-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-text h2 {
+    color: #0077b6; /* Blue theme */
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.highlight-text p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.highlight-facts {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-facts li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    list-style: none;
+}
+
+.highlight-facts li::before {
+    content: '🌊'; /* Wave icon */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1rem;
+}
+.highlight-facts li strong {
+     color: #003366; /* Darker blue for emphasis */
+}
+
+
+/* News Section Styles */
+.news-section {
+    padding: 50px 5%;
+    background-color: #ffffff; /* White background */
+}
+
+.news-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50; /* Dark blue-grey */
+    font-size: 2.5rem;
+}
+
+#news-container {
+    margin: 0 auto; /* Centered */
+    width: 100%;
+    max-width: 1200px; /* Limit width */
+    padding: 20px;
+    background-color: #f8f9f9; /* Light grey background for contrast */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Hide scrollbar visually, handled by JS */
+}
+
+/* Styles for the news slider container */
+#news-articles {
+    padding-bottom: 15px; /* Space for potential horizontal scrollbar */
+}
+
+/* Style individual news cards (controlled by JS) */
+
+/* Use specific Water news card styles */
+#news-articles .water-news-card {
+    background-color: rgba(0, 119, 182, 0.8) !important; /* Blue theme, slightly transparent */
+    border-color: #a9d9ef !important; /* Light blue border */
+    color: white !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3) !important;
+    width: 300px; /* Consistent width */
+}
+
+#news-articles .water-news-card h3 {
+    color: #ffffff !important; /* White titles */
+    font-size: 1.1rem !important;
+}
+
+#news-articles .water-news-card p {
+     color: #e6f7ff !important; /* Lighter text */
+     font-size: 0.9rem !important;
+}
+
+#news-articles .water-news-card p:nth-of-type(2) { /* Source text */
+    color: #cceeff !important; /* Even lighter for source */
+    font-style: italic;
+}
+
+#news-articles .water-news-card a {
+    background-color: #ffffff !important; /* White button */
+    color: #0077b6 !important; /* Blue text */
+    border: none !important;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#news-articles .water-news-card a:hover {
+     background-color: #e6f7ff !important; /* Light blue hover */
+     color: #023e8a !important; /* Darker blue text */
+}
+
+/* Remove old essay container styles */
+.essay-container {
+    display: none;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .highlight-content {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .info-container {
+        width: 90%;
+        margin: 20% auto;
+        padding: 20px;
+    }
+
+    .water-hero h2 {
+        font-size: 2.2rem;
+    }
+    .water-categories h2, .highlight-section h2, .news-section h2 {
+        font-size: 2rem;
+    }
+}
